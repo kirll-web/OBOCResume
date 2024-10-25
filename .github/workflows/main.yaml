@@ -29,5 +29,3 @@ jobs:
 
       - name: Deploy to GitHub Pages
         run: npm run deploy
-        with:
-          access-token: ${{ secrets.GITHUB_TOKEN }}
