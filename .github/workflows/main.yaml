@@ -12,21 +12,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Install, build, test
-        run: |
-          npm install
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20" # Выберите нужную версию Node.js
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        run: npm run build
-
       - name: Deploy to GitHub Pages
         uses: enriikke/gatsby-gh-pages-action@v2
         with:
