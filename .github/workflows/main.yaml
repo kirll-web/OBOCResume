@@ -1,16 +1,30 @@
-name: GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main # Или другой основной веткой, где происходят изменения
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js
-        uses: actions/setup-node@v1
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
-      - run: npm start deploy
+          node-version: "16" # Выберите нужную версию Node.js
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # Имя ветки, куда будут выкладываться файлы
+          folder: public # Папка, которая генерируется после сборки Gatsby
