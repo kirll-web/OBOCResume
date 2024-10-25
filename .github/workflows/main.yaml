@@ -13,12 +13,4 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.x"
-      - run: npm deploy
-      - run: |
-          git config --global user.email "reghansan@gmail.com"
-          git config --global user.name "kirll-web"
-
-      - run: yarn deploy
-        env:
-          PA_TOKEN: ${{ secrets.PA_TOKEN }}
-          CI: true
+      - run: npm start deploy
