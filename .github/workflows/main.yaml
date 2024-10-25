@@ -15,7 +15,7 @@ jobs:
 
       # Переход в рабочую директорию вашего проекта
       - name: Change directory
-        run: cd resume
+        run: cd resumeCV
 
       # Установка зависимостей
       - name: Install Dependencies
