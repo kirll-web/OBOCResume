@@ -12,10 +12,8 @@ jobs:
         with:
           node-version: 16
 
-      # Переход в рабочую директорию вашего проекта
-      - name: Change directory
+        # Переход в рабочую директорию вашего проекта
         run: cd resumeCV
-      - name: build
       - run: npm install
       - run: npm run deploy
       - uses: peaceiris/actions-gh-pages@v3
