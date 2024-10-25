@@ -28,7 +28,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -b master -r \"https://kirll-web:$PA_TOKEN@github.com/blogger/kirll-web.github.io/OBOCResume/\"",
+    "deploy": "gatsby build && gh-pages -d public -b master -r \"https://kirll-web:$GITHUB_TOKEN@github.com/blogger/kirll-web.github.io/OBOCResume/\"",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
