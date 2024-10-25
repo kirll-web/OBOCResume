@@ -13,7 +13,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "16.x"
-      - run: npm start
+      - run: npm deploy
       - run: |
           git config --global user.email "reghansan@gmail.com"
           git config --global user.name "kirll-web"
