@@ -13,3 +13,5 @@ jobs:
         with:
           access-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-branch: gh-pages
+          git-config-email: reghansan@gmail.com
+          git-config-name: reghan
